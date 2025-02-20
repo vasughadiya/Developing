@@ -12,6 +12,7 @@ public with sharing class SharingRuleOnAccountHandler {
     
             for (Account acc : updatedAccounts) {
                 Account oldAcc = oldAccountMap.get(acc.Id);
+                System.debug('Hello');
     
                 if (acc.Rating == 'Hot' && oldAcc.Rating != 'Hot') {
                     AccountShare share = new AccountShare();
