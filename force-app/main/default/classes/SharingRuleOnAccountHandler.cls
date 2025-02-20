@@ -6,7 +6,7 @@ public with sharing class SharingRuleOnAccountHandler {
             User wilsonUser = [SELECT Id FROM User WHERE Name = 'Manager User' LIMIT 1];
     
             if (wilsonUser == null) {
-                System.debug('user not found. Sharing aborted.');
+                System.debug('user not found. Sharing aborted..');
                 return;
             }
     
