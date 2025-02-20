@@ -1,0 +1,15 @@
+<apex:page controller="ContactListPaginationController">
+    <apex:form>
+        <apex:pageBlock title="Contacts with Pagination">
+            <apex:pageBlockTable value="{!contacts}" var="contact">
+                <apex:column value="{!contact.Id}" headerValue="ID" />
+                <apex:column value="{!contact.Name}" headerValue="Name" />
+                <apex:column value="{!contact.Account.Name}" headerValue="Account Name" />
+                <apex:column value="{!contact.Email}" headerValue="Email" />
+            </apex:pageBlockTable>
+
+            <apex:commandButton value="Previous" action="{!previous}" disabled="{!disablePrevious}" />
+            <apex:commandButton value="Next" action="{!next}" disabled="{!disableNext}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

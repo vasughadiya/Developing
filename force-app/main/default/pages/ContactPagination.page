@@ -1,0 +1,33 @@
+<apex:page controller="ContactPaginationController">
+    <apex:form>
+        <apex:pageBlock title="Select Account">
+            <apex:selectList value="{!selectedAccountId}" size="1">
+                <apex:selectOptions value="{!accountOptions}"/>
+                <apex:actionSupport event="onchange" action="{!loadOpportunities}" reRender="opportunityBlock"/>
+            </apex:selectList>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Contacts with Pagination">
+            <apex:pageBlockTable value="{!contacts}" var="contact">
+                <apex:column value="{!contact.Id}" headerValue="ID"/>
+                <apex:column value="{!contact.Name}" headerValue="Name"/>
+                <apex:column value="{!contact.Account.Name}" headerValue="Account Name"/>
+                <apex:column value="{!contact.Email}" headerValue="Email"/>
+            </apex:pageBlockTable>
+            
+            <apex:commandButton value="Previous" action="{!previous}" disabled="{!disablePrevious}"/>
+            <apex:commandButton value="Next" action="{!next}" disabled="{!disableNext}"/>
+        </apex:pageBlock>
+
+        <apex:pageBlock id="opportunityBlock" title="Opportunities">
+            <apex:pageBlockTable value="{!opportunities}" var="opp">
+                <apex:column value="{!opp.Id}" headerValue="ID"/>
+                <apex:column value="{!opp.Name}" headerValue="Opportunity Name"/>
+                <apex:column value="{!opp.CloseDate}" headerValue="Close Date"/>
+            </apex:pageBlockTable>
+            
+            <apex:commandButton value="Previous" action="{!oppPrevious}" disabled="{!oppDisablePrevious}"/>
+            <apex:commandButton value="Next" action="{!oppNext}" disabled="{!oppDisableNext}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

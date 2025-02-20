@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Register">
+            <apex:pageBlockSection >
+                <apex:inputText label="Name"/>
+                <apex:inputText label="Email"/>
+                <apex:inputSecret label="Password"/>
+                <apex:inputSecret label="Confirm Password"/>
+                <apex:commandButton value="Register" action="{!registerUser}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

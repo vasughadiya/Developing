@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Forgot Password">
+            <apex:pageBlockSection >
+                <apex:inputText label="Email"/>
+                <apex:commandButton value="Reset Password" action="{!resetPassword}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

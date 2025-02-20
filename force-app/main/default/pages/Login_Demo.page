@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Login">
+            <apex:pageBlockSection >
+                <apex:inputText label="Username" />
+                <apex:inputSecret label="Password" />
+                <apex:commandButton value="Login" action="{!doLogin}" />
+            </apex:pageBlockSection>
+            <apex:outputLink value="ForgotPasswordPage">Forgot?</apex:outputLink>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
