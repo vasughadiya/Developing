@@ -24,4 +24,19 @@ public with sharing class DeleteSameNameAccountsHandler {
             }
         }
     }
+
+    // public static void CountTotalAmount(List<Account> newAccounts){
+    //     for (Account acc : newAccounts){
+    //         if (acc.Id != null){
+    //             Decimal total = 0;
+    //             List<Contact> cons = [SELECT Id FROM Contact WHERE AccountId = :acc.Id];
+    //             for (Contact con : cons){
+    //                 if (con.Id != null){
+    //                     total += con.Amount__c;
+    //                 }
+    //             }
+    //             acc.Total_Amount__c = total;
+    //         }            
+    //     }
+    // }
 }
