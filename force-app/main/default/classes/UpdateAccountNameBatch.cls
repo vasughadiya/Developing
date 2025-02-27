@@ -1,6 +1,5 @@
 public with sharing class UpdateAccountNameBatch implements Database.Batchable<SObject> {
     
-    
     public Database.QueryLocator start(Database.BatchableContext bc) {
         return Database.getQueryLocator('SELECT Id, Name, Amount, AccountId FROM Opportunity WHERE AccountId != NULL');
     }
@@ -27,7 +26,6 @@ public with sharing class UpdateAccountNameBatch implements Database.Batchable<S
         System.debug('Batch Process Completed Successfully.');
     }
     
-    
     public UpdateAccountNameBatch() {
         
     }
@@ -35,4 +33,4 @@ public with sharing class UpdateAccountNameBatch implements Database.Batchable<S
 
 
 // UpdateAccountNameBatch uanb = new UpdateAccountNameBatch();
-// Database.executeBatch(uanb, 50); // Batch size = 200 records per execution
+// Database.executeBatch(uanb, 50);
