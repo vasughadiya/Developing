@@ -4,6 +4,4 @@ public with sharing class DebugTriggerContextHandler {
         System.debug(str);
     }
 
-    public DebugTriggerContextHandler() {
-    }
 }

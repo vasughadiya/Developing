@@ -21,7 +21,4 @@ public with sharing class AccountNameChangeAlertHandler {
         }
     }
 
-    public AccountNameChangeAlertHandler() {
-
-    }
 }

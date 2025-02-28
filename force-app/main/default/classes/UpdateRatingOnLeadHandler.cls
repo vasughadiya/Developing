@@ -5,8 +5,4 @@ public with sharing class UpdateRatingOnLeadHandler {
             l.Rating = 'Warm';
         }
     }
-    
-    public UpdateRatingOnLeadHandler() {
-        
-    }
 }

@@ -2,21 +2,28 @@ trigger DebugTriggerContext on Account (before insert, before update, before del
     
     if (Trigger.isBefore){
         DebugTriggerContextHandler.myMethod('before');
-    } else if (Trigger.isAfter){
+    }
+    if (Trigger.isAfter){
         DebugTriggerContextHandler.myMethod('after');
-    } else if (Trigger.isInsert){
+    }
+    if (Trigger.isInsert){
         DebugTriggerContextHandler.myMethod('insert');
-    } else if (Trigger.isUpdate){
+    }
+    if (Trigger.isUpdate){
         DebugTriggerContextHandler.myMethod('update');
-    } else if (Trigger.isDelete){
+    }
+    if (Trigger.isDelete){
         DebugTriggerContextHandler.myMethod('delete');
-    } else if (Trigger.isUndelete){
+    }
+    if (Trigger.isUndelete){
         DebugTriggerContextHandler.myMethod('undelete');
     }
-
+    
+    
+    
     System.debug('Trigger.new: ' + JSON.serializePretty(Trigger.new));
     System.debug('Trigger.newMap: ' + JSON.serializePretty(Trigger.newMap));
     System.debug('Trigger.old: ' + JSON.serializePretty(Trigger.old));
     System.debug('Trigger.oldMap: ' + JSON.serializePretty(Trigger.oldMap));
     System.debug('Trigger.size: ' + Trigger.size);
-}   
+}
