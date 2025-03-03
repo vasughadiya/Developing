@@ -34,8 +34,4 @@ public with sharing class CountTotalAmountHandler {
         }
         
     }
-    
-    public CountTotalAmountHandler() {
-        
-    }
 }

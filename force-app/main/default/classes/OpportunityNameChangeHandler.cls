@@ -22,9 +22,4 @@ public with sharing class OpportunityNameChangeHandler {
             insert Tasks;
         }
     }
-    
-    public OpportunityNameChangeHandler(){
-        
-    }
-    
 }

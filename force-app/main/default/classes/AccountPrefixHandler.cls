@@ -5,9 +5,4 @@ public class AccountPrefixHandler {
             acc.Name = 'Mr. '+acc.Name;
         }
     }
-    
-    public AccountPrefixHandler() {
-        
-    }
-    
 }

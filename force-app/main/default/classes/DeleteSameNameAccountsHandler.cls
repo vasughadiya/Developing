@@ -8,14 +8,9 @@ public with sharing class DeleteSameNameAccountsHandler {
                 accountNames.add(acc.Name);
             }
         }
-        
-        if (accountNames.isEmpty()) {
-            return;
-        }
-        
-        List<Account> sameNameAccounts = [SELECT Id FROM Account WHERE Name IN :accountNames];
-        
-        if (!sameNameAccounts.isEmpty()) {
+        if(!accountNames.isEmpty()){
+            List<Account> sameNameAccounts = [SELECT Id FROM Account WHERE Name IN :accountNames];
+            
             try {
                 delete sameNameAccounts;
                 System.debug('Deleted duplicate accounts: ' + sameNameAccounts);
@@ -24,19 +19,5 @@ public with sharing class DeleteSameNameAccountsHandler {
             }
         }
     }
-
-    // public static void CountTotalAmount(List<Account> newAccounts){
-    //     for (Account acc : newAccounts){
-    //         if (acc.Id != null){
-    //             Decimal total = 0;
-    //             List<Contact> cons = [SELECT Id FROM Contact WHERE AccountId = :acc.Id];
-    //             for (Contact con : cons){
-    //                 if (con.Id != null){
-    //                     total += con.Amount__c;
-    //                 }
-    //             }
-    //             acc.Total_Amount__c = total;
-    //         }            
-    //     }
-    // }
+    
 }

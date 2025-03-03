@@ -22,9 +22,4 @@ public with sharing class AccountApprovalHandler {
             }
         }
     }
-    
-    
-    public AccountApprovalHandler() {
-        
-    }
 }

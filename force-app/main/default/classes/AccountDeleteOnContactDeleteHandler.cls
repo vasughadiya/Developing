@@ -16,9 +16,4 @@ public with sharing class AccountDeleteOnContactDeleteHandler {
             }
         }
     }
-    
-    
-    public AccountDeleteOnContactDeleteHandler() {
-        
-    }
 }

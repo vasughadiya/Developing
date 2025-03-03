@@ -36,8 +36,4 @@ public with sharing class SheepProblemHandler {
             }
         }
     }
-    
-    public SheepProblemHandler() {
-        
-    }
 }

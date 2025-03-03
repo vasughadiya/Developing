@@ -21,8 +21,4 @@ public with sharing class CreateContactOnAccountCreationHandler {
             }
         }
     }
-    
-    public CreateContactOnAccountCreationHandler() {
-        
-    }
 }

@@ -27,8 +27,4 @@ public with sharing class EventForNewContactHandler {
             }
         }
     }
-    
-    public EventForNewContactHandler() {
-        
-    }
 }
